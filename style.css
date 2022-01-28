@@ -1,0 +1,157 @@
+:root {
+    /* Primary Colors */
+    --SoftBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-opacity: hsla(178, 100%, 50%, 0.5);
+    /* Neutral Colors */
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+.hover {
+    transition: .3s;
+}
+
+.hover:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: .3s;
+    opacity: 1;
+}
+
+hr {
+    border-color: var(--SoftBlue);
+    opacity: .2;
+    margin: 0px 0 15px 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center center;
+    background-color: var(--Very-dark-blue-main-BG)
+}
+
+.container {
+    background: var(--Very-dark-blue-card-BG);
+    width: 370px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: #040f1f 0px 20px 35px;
+}
+
+.container-img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    display: grid;
+    place-items: center
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transition: .3s;
+    background-color: var(--Cyan-opacity);
+    border-radius: 15px;
+}
+
+.overlay:hover {
+    opacity: 1;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.container-img img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.container-info {
+    margin: 20px 0 0 0;
+}
+
+.container-info h1{
+    color: var(--White);
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.container-info p {
+    margin: 10px 0;
+    color: var(--SoftBlue);
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.container-info .info-nft {
+    display: flex;
+    justify-content: space-between;
+    color: var(--SoftBlue);
+    margin: 5px 0 0;
+}
+
+.info-nft .nft-ethereum, .info-nft .nft-clock {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+
+.nft-ethereum img, .nft-clock img {
+    width: auto;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.nft-ethereum p {
+    color: var(--Cyan);
+    font-weight: 600;
+}
+
+.info-avatar{
+    display: flex;
+}
+
+.info-avatar-img {
+    max-width: 40px;
+    height: 40px;
+    border: 1px solid var(--White);
+    border-radius: 100%;
+}
+
+.info-avatar img {
+    width: 100%;
+    height: auto;
+}
+
+.info-avatar p {
+    margin-left: 20px;
+    line-height: 20px;
+}
